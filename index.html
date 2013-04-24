@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+             ('-.
+           _(  OO)
+ ,--.     (,------. .-'),-----.
+ |  |.-')  |  .---'( OO'  .-.  '
+ |  | OO ) |  |    /   |  | |  |
+ |  |`-' |(|  '--. \_) |  |\|  |
+(|  '---.' |  .--'   \ |  | |  |
+ |      |  |  `---.   `'  '-'  '
+ `------'  `------'     `-----'
+ 01010010 01010111 01000100  01101001 01110011  01101010 01110101 01110011 01110100  01110100 01101000 01100101  01100010 01100101 01100111 01101001 01101110 01101110 01101001 01101110 01100111
+-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Responsive Web Design, Mobile First and Progressive Enhancement in action</title>
+<meta charset="utf-8">
+<script src="js/slides.js"></script>
+
+<meta name="viewport" content="width=1100,height=750"><meta name="apple-mobile-web-app-capable" content="yes">
+
+<body style="display: none" class="loaded">
+<section class="slides layout-regular template-default">
+
+<article class="">
+    <h1>"Responsive Web Design, Mobile First and Progressive Enhancement in action"</h1><br />
+    <h4>www.leolanese.com</h4>
+    <h4>@leolaneseltd</h4>
+    <h4>26th June 2012</h4>
+    <h4>Slides: <a width="200px" href="http://www.leolanese.com/scotlandjs/">www.leolanese.com/scotlandjs</a></h4>
+</article>
+
+<article class="fill">
+    <com>
+    Design is not just what it looks like and feels like. Design is how it works.<br />– Steve Jobs
+    </com>
+
+    <img src="http://farm9.staticflickr.com/8018/7263883898_157b7d5b69_z.jpg" style="left:-90px;" />
+    <a class="flick" href="http://www.flickr.com/photos/marthinshl/7263883898/">http://www.flickr.com/photos/marthinshl/7263883898/</a>
+</article>
+
+
+<article class="smaller intro current">
+    <h3 class="to-build">- Who am I?
+        <h5 class="to-build"><i>Leo Lanese. Web Developer</i></h5>
+    </h3><br />
+    <h3 class="to-build">- What do I do?
+        <h5 class="to-build"><i>javaScript, HTML5 and CSS  </i></h5>
+    </h3><br />
+    <h3 class="to-build">- What are we going to chat about?
+        <h5 class="to-build"><i> * <span class="red">RWD</span>, <span class="red">MF</span> and <span class="red">PE</span>. Why do we need all these <span class="red">methodologies together</span>?</i></h5>
+        <h5 class="to-build"><i> * I would like to <span class="red">share my experience in implementing these methodologies</span></i></h5>
+        <h5 class="to-build"><i> * We are going to chat about some new ideas and how these are going to change the way
+            we are thinking and working</i></h5>
+    </h3>
+    <img src="images/twitter.png" width="20%" style="padding-top:75px; left:50px; position:relative;" />
+    <h2 style="padding-left: 253px;top:-2em;">@leolaneseltd</h2>
+</article>
+
+<article class="fill current">
+    <com>
+        <a>Facing new requirements</a> from the business:
+        <br /><br />
+        <a>AC:</a> As a user, I want to be able to use a
+        <span class="red">"Web site"</span> to connect
+        <span class="red">"the Web"</spann> from my
+        <span class="red">"Desktop"</span>
+    </com>
+
+    <img src="./images/agile.jpg"  />
+    <a class="flick" href="http://www.flickr.com/photos/karthikc/333796870/">http://www.flickr.com/photos/karthikc/333796870/</a>
+</article>
+
+
+<article class="fill">
+    <span>What is <span class="red">"The Web"</span>, <span class="red">"Web site"</span> and my <span class="red">"Desktop"</span>?
+    <br /> <br />
+    <h4 class="to-build degrade" style="font-size:.7em; padding-top:20px">
+        <p><i>We could consider <span class="gold">"the Web"</span>
+              as the <span class="gold"> "internet service"</span> , <br />
+              the <span class="gold">"Web Sites"</span>  is the <span class="gold">"interface"</span>  <br />
+              and the <span class="gold">"Desktop"</span>  is the <span class="gold">"device"</span> </i>
+        </p>
+        <br /> <br />
+        <p class="twitter">"Web sites will be just one of many interfaces we will use to interact with a service"- @yiibu</p>
+    </h4>
+</article>
+
+
+<article class="fill">
+    <h4 class="degrade" style="font-size:.7em; padding-top:20px">
+        <p><i><span class="gold">"the Web"</span> is the <span class="gold">"internet service"</span><br/>
+              <span class="gold">"Web Sites"</span> is the <span class="gold">"interface"</span><br />
+              <span class="gold">"Desktop"</span> is the <span class="gold">"device"</span> </i>
+        </p>
+    </h4>
+    <span class="to-build">On your marks!</span>
+
+    <div class="to-build c0 c1">Desktops Web Sites</div>
+    <div class="to-build c1 c2">Laptops Web Sites</div>
+    <div class="to-build c1 c3">Mobiles Web Sites</div>
+    <div class="to-build c1 c4">Tablets Web Sites</div>
+    <div class="to-build c1 c5">e-books Web Sites</div>
+
+    <div class="to-build c1 c5" style="background:#000;">
+        <h10> <a href="#">Future friendly ?</a> </h10>
+        <p class="3d" style="top: 5em;position: relative;">
+        (because they will be asking next week)</p></div>
+
+    <div class="to-build c1 c6">Watches Web Sites</div>
+    <div class="to-build c1 c7">TVs Web Sites</div>
+    <div class="to-build c1 c8">Windows Web Sites</div>
+    <div class="to-build c1 c9">Kitchen Web Sites</div>
+    <div class="to-build c1 c10">Glasses Web Sites</div>
+    <h4 class="to-build" style="position:absolute;top:0;height: 95%;">
+        <span class="sign">
+          Oh mama! ... <br /><br />
+          The number of devices are growing
+          <u>out of control!</u>
+        </span>
+
+        <img src="./images/sorprendido.jpg" class="whatIs" style="background:#000" />
+        <a class="flick" href="http://www.flickr.com/photos/11136492@N02/3721448864">http://www.flickr.com/photos/11136492@N02/3721448864</a>
+    </h4>
+</article>
+
+
+<article class="fill current">
+    <com >
+       Even worse. Now <span class="red">we have different teams</span> working <span class="red">on different Web Sites</span> for <span class="red">different interfaces </span>connected to the service
+    </com>
+    <br /> <br />
+    <h4 class="to-build degrade" style="font-size:.7em">
+        <p><i>so ... <span class="gold">more devices = more resources</span> and developing time</i></p>
+        <p><i>The question is: <br /> How <span class="gold">can we develop for all</span> current and <span class="gold">future devices</span>?</i></p>
+    </h4>
+    <br />
+    <img src="./images/lock.jpg" alt="lock" width="50%">
+    <div class="to-build degrade" >
+        <img  src="./images/changeway.jpg" class="whatIs" style="width:50%"/>
+        <com class=" degrade" style="z-index: 11;position:relative;top:-13em">
+            Let's re-think the way like we are developing!
+        </com>
+    </div>
+</article>
+
+
+<article class="fill">
+    <com>
+        The <a style="font-size:50px;">only One Web</a> revolution!
+    </com>
+    <br /><br />
+    <h4 class="to-build degrade" style="font-size:.7em">
+        <p><i>Responsive Web Design is the new revolution that changes everything, <span class="gold">eliminating</span> the need for a
+            <span class="gold">different development phases for each new gadget</span> on the market</i></p>
+    </h4>
+    <img src="images/hippy.jpg" alt="hippy" width="50%"/>
+    <a class="flick" href="http://www.flickr.com/photos/misterno/5787984204">http://www.flickr.com/photos/misterno/5787984204</a>
+</article>
+
+
+<article class="fill">
+    <h2 >
+        <com>Responsive Web Design, give us the chance to create <span class="red">only one Web</span></com>
+    </h2>
+    <br />
+    <h4 class="to-build degrade" style="font-size:.7em">
+        <p><i><span class="gold">One Web</span> capable of flowing <span class="gold">through all platforms</span>, devices and brands and those that are about to come</i></p>
+    </h4>
+    <br />
+    <h4 class="to-build degrade" style="font-size:.7em">
+        <p><i>Just <span class="gold">one Web</span>, <span class="gold">one project</span> and <span class="gold">one team</span></i></p>
+    </h4>
+    <img src="./images/unique.jpg"  />
+    <a class="flick" href="http://www.flickr.com/photos/generalnoir/391009102">http://www.flickr.com/photos/generalnoir/391009102</a>
+</article>
+
+
+<article class="">
+    <com>
+        Let's see <b>Responsive Web Design in action</b>...
+    </com>
+</article>
+
+
+<article class="fill">
+    <com>Responsive Web Design components:</com>
+    <br />
+    <h2 class="degrade"><p>1- A flexible, grid-based layout</p></h2>
+    <br />
+    <h4 class="degrade">
+        <a href="http://jsfiddle.net/leolanese/wyraD/" target="_blank">
+            eg: font sizes relative units</a><br />
+    </h4>
+    <br />
+    <h4 class="degrade">
+        <a href="http://jsfiddle.net/leolanese/ZwgFP/" target="_blank">
+            eg: 960px, flexible grids</a>  <br />
+    </h4>
+    <img src="images/zebra.jpg" width="50%" />
+</article>
+
+
+<article class="fill">
+    <h2 class="degrade"><p>2- Flexible images and media</p></h2>
+    <br />
+    <h4 class="degrade">
+        <a href="http://jsfiddle.net/leolanese/U5JWJ/" target="_blank">
+            eg: max-width flexible images ... it's a hack?</a><br />
+    </h4>
+    <br />
+    <h4 class="degrade">
+        <a href="http://jsfiddle.net/leolanese/bRpEH/" target="_blank">
+            eg: max-width container</a><br />
+    </h4>
+    <br />
+    <h4 class="degrade">
+        <a href="http://jsfiddle.net/leolanese/aPaYt/" target="_blank">
+            eg: BBC News responsive images (C/S side)</a><br />
+    </h4>
+    <br />
+    <h4 class="degrade">
+        <a href=" http://www.w3.org/community/respimg/2012/05/11/respimg-proposal/" target="_blank">
+            eg: Get involved: W3C proposal Responsive images (C side)</a><br />
+    </h4>
+
+    <img src="images/plasticman.jpg" width="50%" />
+    <a class="flick" href=" http://uk.ign.com/images/dvd/plastic-man-the-complete-collection-14349284/4fa6cb3dcdc388ed13f43334"> http://uk.ign.com</a>
+</article>
+
+
+<article>
+    <h2 class="degrade"><p>3- media queries</p></h2>
+    <br />
+    <h4 class="degrade">
+        <a href="http://jsfiddle.net/leolanese/fvc9e/" target="_blank">
+            eg: media queries</a>
+    </h4>
+    <br />
+    <h4 class="degrade">
+        <a href=" http://www.leolanese.com/portfolio/files/mediaQueries6/mq.html" target="_blank">
+            eg: media queries working</a>
+    </h4>
+    <br />
+    <h4 class="degrade" style="font-size:.7em">
+        <p><i><span class="gold">Performance is the key</span>, don't feel like we need to create 20 complex media queries ... just 3: "S, M and L" and always start from "S"</i></p>
+    </h4>
+
+    <!--
+    <h4 class="degrade"  >
+      <p class="twitter"> "Media Queries now a W3C Recommendation <a href="http://t.co/gAwgMYOO">http://t.co/gAwgMYOO",- @netmag</a></p>
+    </h4>
+    <h4 class="degrade"  >
+        <p class="twitter"> "Google recommends webmasters follow the industry best practice of using responsive web design ...",- @copyblogger</a></p>
+    </h4>
+    -->
+</article>
+
+
+<article class="fill">
+    <com>
+        Let's simplify the media queries into: <br />
+        Small, Medium, Large
+    </com>
+    <br /><br /><br /><br /><br />
+    <h4 class="degrade">
+        <p class="twitter">"The terms 'mobile' and 'tablet' are so broad as to be unhelpful for describing what we're trying to do.",-@beep</p>
+    </h4>
+    <br />
+    <h4 class="degrade"  >
+        <p class="twitter">"If we're after more future-proof responsive designs, we should stop thinking in terms of '320px', '480px', '768px' or whatever
+            ...Instead, we should focus on breakpoints tailored to the design we're working on",-@RWD</p>
+    </h4>
+    <img src="./images/size.jpg" alt="size" width="50%">
+    <a class="flick" href="http://www.flickr.com/photos/meetrajesh/6972883401/">http://www.flickr.com/photos/meetrajesh/6972883401/</a>
+</article>
+
+
+<article style="background:black" class="">
+    <com>
+        Now we need to start from smallest and simplest layout
+    </com>
+</article>
+
+
+<article class="">
+    <com>Mobile First</com>
+    <ul >
+        <li>
+            <h5>In order to create a better UNIQUE user-experience,
+                we need to <span class="red">start from the simplest layout and functionality</span> of our CONTENT
+            </h5>
+        </li>
+        <li>
+            <h5>Then we need to add <span class="red">on top of that</span>, the basic core of the content using media-queries
+            </h5>
+        </li>
+        <li>
+            <h5><span class="red">We need to keep it simple</span>. The content needs to be simple
+            </h5>
+        </li>
+        <li>
+            <h5>Mobile First <span class="red">follows progressive enhancement principles</span>
+            </h5>
+        </li>
+        <br />
+        <h4 class="degrade">
+            <a href="http://jsfiddle.net/leolanese/KRPzQ/" target="_blank">
+                eg: Mobile First example</a>
+        </h4>
+        <br />
+    </ul>
+</article>
+
+
+<article class="fill"> <!-- People, don't think about this problem in the past, now A computer with no internet is like a car with no gas -->
+    <com style="background:rgba(255, 255, 255, .40)">
+        <span class="red">Mobile First</span> allow as to be work directly with the <span class="red">Content</span>. <br />
+        Soon 'Content' will be everywhere. Most gadgets will be connected.<br />
+        Our content needs to be fluid and ready to understand them
+    </com>
+    <br /> <br />
+    <h4 class="degrade" style="top:200px">
+        <p class="twitter">"Get your content ready to go anywhere because it is going to go everywhere",- @brad_frost</p>
+    </h4>
+    <img src="./images/free.jpg" />
+    <a class="flick" href="http://www.flickr.com/photos/rosh/246187583/">http://www.flickr.com/photos/rosh/246187583/</a>
+</article>
+
+
+<article class="fill current">
+    <com class="alpha" >
+        Content needs to be fluid, like water, and media-queries should be considered as limiting borders
+    </com>
+    <img src="./images/pool.jpg" alt="tetris" width="50%">
+</article>
+
+
+<article class="fill current">
+    <com class="alpha">
+        When water flows into a larger or smaller part of a river it instantly
+        adapts to the shape and size of it's environment
+    </com> <br /> <br />
+    <img src="./images/venice.jpg" alt="tetris" width="50%">
+</article>
+
+
+<article class="fill">
+    <br />
+    <com class="alpha" style="top:12em;position:relative;">
+        Now let's freeze the idea of formless water: <a href="http://www.freetetris.org/game.php" target="_blank"> Let's make some ice!</a>
+    </com>
+
+    <img src="./images/tetris.jpg" alt="tetris" width="50%">
+</article>
+
+<article class="fill">
+    <a href="http://youtube.googleapis.com/v/QAVjh45i_pU" target="_black">
+        <com> Empty your mind, be formless, shapeless like water... </com>
+    </a>
+    <br />
+    <h3 style="position:fixed;bottom:0px"><p>Bruce_Lee @DrummerHead</p></h3>
+    <img src="./images/iguazu.jpg" alt="tetris" width="50%">
+</article>
+
+
+
+
+<article class="fill">
+    <com>
+        If we're fluid we'll end up with <span class="red">same content on same size on different devices</span>, we're delivering a good but not the best UX to those capable of more.
+    </com>
+<br /><br />
+    <com>
+        <span class="red">Content needs to adapt</span> to different user environments. <span class="red">We need an adaptation paradigm</span>
+    </com>
+
+    <a class="flick" href="http://www.flickr.com/photos/ntr23/187248039">http://www.flickr.com/photos/ntr23/187248039</a>
+    <img src="./images/burbujas.jpg" alt="burbujas" width="50%">
+</article>
+
+<article class="fill ">
+    <com>
+        <span class="red">Graceful degradation</span> or <span class="red">Progressive Enhancement</span>
+    </com>
+    <br /><br />
+    <h4 class="degrade" style="font-size:.7em">
+        <p>
+            Both are about <span class="gold">how well a site works on different browsers</span> and devices
+        </p>
+    </h4>
+    <h4 class="degrade" style="font-size:.7em">
+        <p><span class="gold">The difference is where they place their emphasis</span> and how this affects the workflow. <br />
+    </h4>
+    <h4 class="degrade" style="font-size:.7em">
+        <p><span class="gold">GD differs from PE</span> because <span class="gold">GD is the path from complexity to simplicity</span>, whereas <span class="gold">PE is the path from simplicity to complexity</span>
+    </h4>
+    <img src="./images/pixel.jpg" width="100%"/>
+    <a class="flick" href="http://www.flickr.com/photos/lonelycoo/3313530719/">http://www.flickr.com/photos/lonelycoo/3313530719/</a>
+</article>
+
+
+<article class="fill ">
+    <com>
+        <span class="red">Graceful degradation</span>
+    </com>
+    <br /><br />
+    <h4 class="degrade" style="font-size:.7em">
+        <p><span class="gold">Focuses on </span> building the website for the most <span class="gold">advanced/capable browsers</span>.
+            Older browsers are expected to have a sub-standard, but acceptable user-experience</p>
+    </h4>
+    <br />
+    <h4 class="degrade" style="font-size:.7em">
+        <p><span class="gold">Testing for support in older browsers, is not cover or relegated</span> to the end of the list of priorities
+    </h4>
+</article>
+
+
+<article class="fill">
+    <com><b>Progressive Enhancement</b></com>
+    <br /><br />
+    <h4 class="degrade" style="font-size:.7em">
+        <p><span class="gold">Bases on "fault tolerance's" and Enphasis</span> on the <span class="gold">content</span>. <span class="gold">Not browsers</span></p>
+    </h4>
+    <h4 class="degrade" style="font-size:.7em">
+        <p>Allows us to <span class="gold">access to our content</span>, regarless of its capabilities
+        </p>
+    </h4>
+    <h4 class="degrade" style="font-size:.7em">
+        <p>Allows us to <span class="gold">feature detect</span>, adapt and keep up
+            with the latest environments and capabilities
+        </p>
+    </h4>
+    <h4 class="degrade" style="font-size:.7em">
+        <p>Generates <span class="gold">Progressive user-experiences</span></p>
+    </h4>
+    <h4 class="degrade" style="font-size:.7em">
+        <p><span class="gold">We start with the lowest</span> common denominator as our baseline and <span class="gold">we add layers on top</span></p>
+    </h4>
+</article>
+
+
+<article style="background:#fff !important">
+    <img src="./images/pe.png" style="height:100%;width:100%" />
+</article>
+
+
+<article class="fill ">
+    <com>
+        PE is a more appropriate paradigm because is focus on Content.
+        Adding layers progressively to provide the user with the best they can get from their device using <span class="red">feature detection</span>
+    </com>
+    <h4 class="degrade" ><br />
+        <p class="twitter">"Progressive enhancement is essential for the web now more than ever",- @stephanierieger</p>
+    </h4>
+    <h4 class="degrade">
+        <p class="twitter">"Getting into the progressive enhancement mindset is quite simple: <br />just think from the content out"- @AaronGustafson</i></p>
+    </h4>
+    <img src="./images/cebolla.jpg" />
+    <a class="flick" href="http://www.flickr.com/photos/theilr/4229575296/">http://www.flickr.com/photos/theilr/4229575296/</a>
+</article>
+
+
+
+<article class="fill">
+    <com class="background:rgba(0,0,0,1)">
+    <span class="red">Feature detection</span> gives us the chance to be indifferent to the environment
+        and content should be enhanced based on the capabilities of the device.
+    </com>
+    <img src="./images/testing2.jpg" width="50%"/>
+</article>
+
+
+<article class="fill">
+    <com>
+        We will end up with <span class="red">similar</span> but not <span class="red">identical</span> appearances of the same content in different environments
+    </com>
+    <br />   <br />
+    <h4 class="degrade">
+        <a href="http://jsfiddle.net/leolanese/jQ3bh/" target="_blank">
+            eg: border IE and WebKit</a>
+    </h4>
+    <img src="./images/houses.jpg" width="100%"/>
+    <a class="flick" href="http://www.flickr.com/photos/treehouse1977/496088319/">
+        http://www.flickr.com/photos/treehouse1977/496088319/</a>
+</article>
+
+
+
+
+<article class="fill">
+    <com>
+        How can we detect the capabilities of the environment?
+    </com>
+    <br /><br />
+
+    <img style="top:-140px;" src="./images/se.jpg" width="100%"/>
+</article>
+
+
+<article>
+    <com>
+        Modernizr at help!
+    </com>
+    <br />
+    <h3 style="font-size:14pt">Working with <a href="http://jsfiddle.net/leolanese/95CGp/">fallback</a> or emulation mode (<a href="http://html5please.com/">polyfills</a>)</h3>
+    <p>CHROME 18</p>
+    <pre style="overflow-y: scroll;height:100px">
+    <p>&lt;html class="js flexbox flexbox-legacy canvas canvastext webgl no-touch geolocation
+            postmessage websqldatabase indexeddb hashchange history
+            draganddrop websockets rgba hsla multiplebgs backgroundsize
+            borderimage borderradius boxshadow textshadow opacity
+            cssanimations csscolumns cssgradients cssreflections csstransforms
+            csstransforms3d csstransitions fontface generatedcontent video
+            audio localstorage sessionstorage webworkers applicationcache
+            svg inlinesvg smil svgclippaths cookies cssresize cssscrollbar
+            no-devicemotion deviceorientation fullscreen json"&gt;
+    </pre>
+    <p>IE 8</P>
+    <pre style="overflow-y: scroll;height:100px">
+    <p>&lt;html class="js no-flexbox canvas canvastext no-webgl no-touch geolocation postmessage
+            no-websqldatabase no-indexeddb hashchange no-history draganddrop no-websockets
+            rgba hsla multiplebgs backgroundsize no-borderimage borderradius boxshadow
+            no-textshadow opacity no-cssanimations no-csscolumns no-cssgradients
+            no-cssreflections csstransforms no-csstransforms3d no-csstransitions
+            fontface generatedcontent video audio localstorage sessionstorage no-webworkers
+            no-applicationcache no-svg inlinesvg smil svgclippaths"&gt;
+    </p>
+    </pre>
+    <h4 class="degrade">
+        <p>Modenizr feature list
+            <a style="font-size:.7em" href="http://jsfiddle.net/leolanese/95CGp/" target="_blank">Modenizr feature list</a>
+        </p>
+    </h4>
+</article>
+
+<article class="fill">
+    <com>Let's see it all <b>in action</b></com>
+    <br /><br />
+    <h4 class="to-build degrade"><p>js or not js?. javaScript as a feature.</p></h4>
+    <h4 class="to-build degrade"><p>Device features
+        <a style="font-size:.9em" href="http://html5test.com/" target="_blank">
+            html5test</a>
+        <a style="font-size:.9em" href="http://www.rng.io/" target="_blank">
+            ringmark</a>
+        <a style="font-size:.9em" href="http://caniuse.com/" target="_blank">
+            canIuse</a>
+    </h4>
+    <h4 class="to-build degrade">
+        <p>Working fallback: Modernizr <a style="font-size:.9em" href="http://jsfiddle.net/leolanese/q8Uzj/" target="_blank">.svg</a>
+           Conditional CSS <a style="font-size:.9em" href="http://jsfiddle.net/leolanese/HvHAT/" target="_blank">.svg</a></p>
+    </h4>
+    <h4 class="to-build degrade">
+        <p>yepNope + Modernizr <a style="font-size:.9em" href="http://jsfiddle.net/leolanese/WUxSs/" target="_blank">
+        <a style="font-size:.9em" href="http://jsfiddle.net/leolanese/WUxSs/" target="_blank"> yepNope + Modernizr</a></p>
+    </h4>
+    <img src="./images/courage.jpg" width="50%" />
+</article>
+
+
+<article class="fill">
+    <com>Study Cases</com>
+    <br /><br />
+    <h4 class="to-build degrade">
+        <p>Study Case: <a style="font-size:.8em" href="http://responsive.is/http://web.archive.org/web/20100814044016/http://www.boston.com/bostonglobe/" target="_blank">
+            bostonglobe.com <span class="gold">2010</span></a>
+            <a style="font-size:.8em" href="http://responsive.is/bostonglobe.com" target="_blank">bostonglobe.com <span class="gold">2012</span></a>
+        </p>
+    </h4>
+    <h4 class="to-build degrade">
+        <p>Study Case: <a style="font-size:.9em" href="http://www.responsinator.com/?url=http%3A%2F%2Fm.bbc.co.uk%2Fnews" target="_blank">BBC News.com</a>
+            <a style="font-size:.9em" href="http://www.responsinator.com/?url=http://www.bbc.co.uk/home/mobile" target="_blank">BBC homepage</a></p>
+    </h4>
+    <h4 class="to-build degrade">
+        <p>Study Case: <a style="font-size:.9em" href="http://responsivepx.com/?http://www.sony.com/index.php#959x1206&scrollbars" target="_blank">SONY</a>
+    </h4>
+    <h4 class="to-build degrade">
+        <p>Study Case: <a style="font-size:.9em" href="http://responsive.is/http://earthhour.fr/" target="_blank">World Wildlife Fund Earth Hour</a></p>
+    </h4>
+    <a class="flick" href="http://www.flickr.com/photos/countylemonade/5940191955/">http://www.flickr.com/photos/marthinshl/7263883898/</a>
+    <img src="./images/goforit.jpg" width="50%" />
+</article>
+
+
+
+<article class="fill">
+    <com><span class="red">Content first</span> is like a river,<br />
+        which is passing through <span class="red">Responsive Web Design's</span> various shapes <br />
+        <span class="red">Progressive Enhancement</span> tells us what features to manage to improves the UX</com>
+    <img src="./images/chart.png" style="width: 6em" />
+</article>
+
+
+<article class="">
+    <h1>"Thanks!"</h1>
+    <br /><br />
+    <h4>26th June 2012</h4>
+    <h4 style="top:-4em;"><span style="color:#900000">Slides: </span><a width="200px" href="http://www.leolanese.com/scotlandjs/">
+        www.leolanese.com/scotlandjs</a><img src="./images/qr.png" >
+    </h4>
+    <br />
+    <h4><span style="color:#900000">Let's stay in touch:</span><a href="http://https://twitter.com/leolaneseltd">@leolaneseltd</a></h4>
+    <br />
+    <h4>Thanks to www.flickr.com and it's photographers for the photos.
+        <a href="http://www.creativecommons.org/licenses/">www.creativecommons.org</a>
+    </h4>
+
+</article>
+
+<link rel="stylesheet" type="text/css" href="./css/styles.css">
+<script src="http://code.jquery.com/jquery-1.7.1.js"></script>
+<script type="text/javascript" src="./js/prettify.js"></script>
+<script src="./js/base.js"></script>
+
+</body>
+</html>
