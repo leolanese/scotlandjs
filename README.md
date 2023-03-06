@@ -20,7 +20,7 @@ Responsive Web Design, Mobile First and Progressive enhancement in action<br>
 <a href"www.leolanese.com/scotlandjs/">Leo Lanese Responsive Web Design</a>
 
 ### web presentation
-<a href="http://sirwilliam.github.io/scotlandjs/">http://sirwilliam.github.io/scotlandjs/</a>
+<a href="https://www.leolanse.com/scotlandjs">https://www.leolanse.com/scotlandjs</a>
 
 ### Support or Contact
 Having trouble with Pages? @leolaneseltd we’ll help you sort it out.
